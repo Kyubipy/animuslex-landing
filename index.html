@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AnimusLex - Primera app de auditoría judicial automatizada de Paraguay. Monitorea 6,318 juzgados, detecta inactividad procesal y genera reportes automáticos.">
+    <meta name="keywords" content="auditoría judicial, paraguay, abogados, expedientes, juzgados, corte suprema">
+    <title>AnimusLex - Auditoría Judicial Automatizada de Paraguay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">AnimusLex</div>
+            <a href="https://play.google.com/store/apps/details?id=com.animus.animuslex" target="_blank" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all">
+                Descargar App
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                        La Primera App de <span class="text-yellow-300">Auditoría Judicial</span> Automatizada de Paraguay
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-purple-100">
+                        Monitorea expedientes, detecta inactividad procesal y genera reportes automáticos en segundos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.animus.animuslex" target="_blank" class="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-bold hover:shadow-2xl transition-all transform hover:scale-105">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                            Descargar en Google Play
+                        </a>
+                        <a href="#features" class="inline-flex items-center justify-center bg-purple-500 bg-opacity-20 text-white px-8 py-4 rounded-full text-lg font-semibold border-2 border-white hover:bg-white hover:text-purple-600 transition-all">
+                            Ver Características
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-6 text-sm">
+                        <div class="flex items-center">
+                            <span class="text-yellow-300 text-2xl mr-1">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <div class="border-l border-purple-300 pl-6">
+                            <p class="font-semibold">Gratis por 7 días</p>
+                            <p class="text-purple-200">Luego $6.99/mes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block animate-float">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <div class="inline-block bg-white text-purple-600 rounded-2xl px-6 py-3 font-bold text-lg mb-4">
+                                📱 App en Google Play
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center bg-white bg-opacity-20 rounded-xl p-4">
+                                <span class="text-3xl mr-4">⚖️</span>
+                                <div>
+                                    <p class="font-semibold">6,318 Juzgados</p>
+                                    <p class="text-sm text-purple-200">Cobertura completa</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white bg-opacity-20 rounded-xl p-4">
+                                <span class="text-3xl mr-4">🚨</span>
+                                <div>
+                                    <p class="font-semibold">Alertas Automáticas</p>
+                                    <p class="text-sm text-purple-200">Inactividad procesal</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white bg-opacity-20 rounded-xl p-4">
+                                <span class="text-3xl mr-4">📊</span>
+                                <div>
+                                    <p class="font-semibold">Reportes Excel</p>
+                                    <p class="text-sm text-purple-200">Exportación completa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-white py-12 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">6,318</div>
+                    <p class="text-gray-600">Juzgados Mapeados</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">13</div>
+                    <p class="text-gray-600">Materias Judiciales</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">20</div>
+                    <p class="text-gray-600">Circunscripciones</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                    <p class="text-gray-600">Monitoreo Continuo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    Lo que <span class="gradient-text">Ninguna Otra App</span> Tiene
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    AnimusLex automatiza tareas que te toman horas, permitiéndote enfocarte en lo que realmente importa: ganar casos.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Búsqueda Dual Inteligente</h3>
+                    <p class="text-gray-600 mb-4">
+                        Busca simultáneamente en juzgados digitales y no digitales. Cobertura total del sistema judicial paraguayo.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 6,318 juzgados mapeados</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Resultados en segundos</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Sin límite de búsquedas</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="text-5xl mb-4">🚨</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Alertas de Inactividad</h3>
+                    <p class="text-gray-600 mb-4">
+                        Detecta automáticamente expedientes sin movimiento por más de 5 meses. Evita riesgos de prescripción.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Notificaciones en tiempo real</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Clasificación por riesgo</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Historial completo</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Extracción de Montos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Identifica automáticamente los montos en controversia de cada expediente para mejor gestión de cartera.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Detección automática</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Conversión de monedas</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Reportes consolidados</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="text-5xl mb-4">📄</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Links Directos a PDFs</h3>
+                    <p class="text-gray-600 mb-4">
+                        Acceso inmediato a todos los documentos judiciales de la Corte Suprema de Justicia.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Sin navegación manual</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Descarga rápida</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Organización automática</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Reportes en Excel</h3>
+                    <p class="text-gray-600 mb-4">
+                        Exporta todos los datos a Excel con eliminación automática de duplicados y formato profesional.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Deduplicación inteligente</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Formato personalizable</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Listo para presentar</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Detección de Recursos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Identifica automáticamente recursos de apelación, nulidad y procesos accesorios.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Seguimiento automático</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Alertas de plazos</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Historial completo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof - Municipalidad -->
+    <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+                    <span class="text-sm font-semibold">🏛️ TECNOLOGÍA PROBADA INSTITUCIONALMENTE</span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                    Sistema en Producción en la<br/>Municipalidad de Asunción
+                </h2>
+                <p class="text-xl text-purple-100 max-w-3xl mx-auto mb-12">
+                    La misma infraestructura backend que procesa miles de expedientes institucionales ahora está en tu celular.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold mb-2">3,862</div>
+                    <p class="text-lg">Expedientes Gestionados</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold mb-2">Gs. 1B+</div>
+                    <p class="text-lg">Monto Monitoreado</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold mb-2">184</div>
+                    <p class="text-lg">Sentencias de Remate Detectadas</p>
+                </div>
+            </div>
+
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8">
+                <p class="text-lg italic mb-4">
+                    "AnimusLex está respaldado por tecnología empresarial probada. El mismo software que uso diariamente para gestionar la cartera judicial institucional de la Municipalidad de Asunción."
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full mr-4 flex items-center justify-center text-2xl">
+                        👨‍💼
+                    </div>
+                    <div>
+                        <p class="font-bold">Jorge Sabaté</p>
+                        <p class="text-sm text-purple-200">Coordinador de Asuntos Jurídicos - Municipalidad de Asunción</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    Precio <span class="gradient-text">Transparente</span>
+                </h2>
+                <p class="text-xl text-gray-600">Sin sorpresas, sin costos ocultos</p>
+            </div>
+
+            <div class="max-w-lg mx-auto">
+                <div class="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-3xl p-1 shadow-2xl">
+                    <div class="bg-white rounded-3xl p-8">
+                        <div class="text-center mb-8">
+                            <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                🎉 PRUEBA GRATIS POR 7 DÍAS
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Plan Premium</h3>
+                            <div class="flex items-baseline justify-center">
+                                <span class="text-5xl font-extrabold gradient-text">$6.99</span>
+                                <span class="text-gray-500 ml-2">/mes</span>
+                            </div>
+                            <p class="text-gray-600 mt-2">después del periodo de prueba</p>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700">Monitoreo ilimitado de expedientes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700">Alertas en tiempo real</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700">Exportación a Excel ilimitada</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700">Acceso a 6,318 juzgados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700">Soporte prioritario</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700">Actualizaciones automáticas</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.animus.animuslex" target="_blank" class="block w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-4 rounded-full text-lg font-bold hover:shadow-2xl transition-all transform hover:scale-105">
+                            Comenzar Prueba Gratis
+                        </a>
+                        <p class="text-center text-sm text-gray-500 mt-4">
+                            Sin tarjeta de crédito requerida para la prueba
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-gray-50 rounded-2xl p-8 text-center">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">¿Necesitas una solución institucional?</h4>
+                    <p class="text-gray-600 mb-6">
+                        Ofrecemos implementación personalizada para municipalidades, bancos y empresas.
+                    </p>
+                    <a href="mailto:contacto@animuslex.app" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                Comienza a Optimizar tu<br/>Trabajo Judicial Hoy
+            </h2>
+            <p class="text-xl mb-8 text-purple-100">
+                Únete a los abogados que ya están automatizando su gestión procesal con AnimusLex
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.animus.animuslex" target="_blank" class="inline-flex items-center justify-center bg-white text-purple-600 px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl transition-all transform hover:scale-105">
+                <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                Descargar Ahora - Gratis 7 Días
+            </a>
+            <p class="text-sm text-purple-200 mt-4">
+                Disponible en Google Play Store • Sin tarjeta requerida para prueba
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4 gradient-text">AnimusLex</h3>
+                    <p class="text-gray-400">
+                        La primera app de auditoría judicial automatizada de Paraguay.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:contacto@animuslex.app" class="hover:text-white transition-colors">contacto@animuslex.app</a></li>
+                        <li>Asunción, Paraguay</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 AnimusLex. Todos los derechos reservados.</p>
+                <p class="mt-2 text-gray-500">Desarrollado por AnimusLabs</p>
+            </div>
+        </footer>
+
+</body>
+</html>
