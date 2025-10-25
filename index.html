@@ -38,20 +38,39 @@
             background-color: #128c7e;
             transform: scale(1.1);
         }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        .video-container iframe {
+        
+        /* Video Background Styles */
+        .video-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 20px;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+            min-height: 100vh;
+            min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+            transform: translate(-50%, -50%);
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.92) 0%, rgba(118, 75, 162, 0.92) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
@@ -80,9 +99,23 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="gradient-bg text-white py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Hero Section with Video Background -->
+    <section class="relative text-white py-20 lg:py-32 overflow-hidden">
+        <!-- Video Background -->
+        <div class="video-background">
+            <iframe 
+                src="https://www.youtube.com/embed/lvPLbjeUa-s?autoplay=1&mute=1&loop=1&playlist=lvPLbjeUa-s&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <!-- Purple Overlay -->
+        <div class="video-overlay"></div>
+        
+        <!-- Content -->
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">
@@ -139,37 +172,8 @@
         </div>
     </section>
 
-    <!-- Video Demo Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <div class="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                    🎥 VIDEO DEMO
-                </div>
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                    Conocé <span class="gradient-text">AnimusLex</span> en Acción
-                </h2>
-                <p class="text-xl text-gray-600">
-                    Mirá cómo funciona nuestra tecnología de auditoría judicial
-                </p>
-            </div>
-            
-            <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 shadow-2xl border-2 border-purple-200">
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/lvPLbjeUa-s" 
-                        title="AnimusLex Demo" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Productos Section -->
-    <section id="productos" class="py-20 bg-gray-50">
+    <section id="productos" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
