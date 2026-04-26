@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auditor Institucional - Software empresarial de auditoría judicial automatizada para instituciones de Paraguay. Gestión de expedientes judiciales profesional.">
+    <meta name="keywords" content="auditoría judicial, paraguay, software jurídico, expedientes, juzgados, corte suprema, gestión legal institucional">
+    <title>Auditor Institucional - Software de Auditoría Judicial | Paraguay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Colores Premium */
+        .bg-black-rich { background-color: #0a0a0a; }
+        .bg-black-soft { background-color: #111111; }
+        .bg-black-card { background-color: #1a1a1a; }
+        .text-gold { color: #d4af37; }
+        .text-gold-light { color: #e6c555; }
+        .bg-gold { background-color: #d4af37; }
+        .border-gold { border-color: #d4af37; }
+        .border-gold-subtle { border-color: rgba(212, 175, 55, 0.3); }
+        
+        .gradient-text-gold { 
+            background: linear-gradient(135deg, #d4af37 0%, #f2d06b 50%, #d4af37 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+        }
+        
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+            transform: translate(-50%, -50%);
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.90) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .card-premium {
+            background: #1a1a1a;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+        .card-premium:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .input-premium {
+            background: #0a0a0a;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .input-premium:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            outline: none;
+        }
+        .input-premium::placeholder { color: #666666; }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #e6c555 50%, #d4af37 100%);
+            color: #0a0a0a;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .divider-gold {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+        }
+    </style>
+</head>
+<body class="bg-black-rich">
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/595984414946?text=Hola,%20quisiera%20información%20sobre%20Auditor%20Institucional" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-black-rich border-b border-gold-subtle sticky top-0 z-50 backdrop-blur-lg bg-opacity-95">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-gold text-2xl mr-2">⚖️</span>
+                <span class="text-2xl font-semibold text-white">Auditor <span class="text-gold">Institucional</span></span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="#funciones" class="text-gray-400 hover:text-gold font-medium transition-colors hidden sm:block">Funciones</a>
+                <a href="#contacto" class="btn-gold px-6 py-2 rounded-full text-sm font-semibold">Solicitar Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative text-white py-20 lg:py-32 overflow-hidden">
+        <div class="video-background">
+            <iframe src="https://www.youtube.com/embed/lvPLbjeUa-s?autoplay=1&mute=1&loop=1&playlist=lvPLbjeUa-s&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-overlay"></div>
+        
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-gold bg-opacity-20 border border-gold text-gold px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        ⚡ SOFTWARE EMPRESARIAL PREMIUM
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                        Auditoría Judicial <span class="gradient-text-gold">Automatizada</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-gray-300 font-light">
+                        Software profesional de gestión jurídica con integración directa al sistema de la Corte Suprema de Justicia del Paraguay.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="btn-gold px-8 py-4 rounded-full text-lg font-bold text-center">Solicitar Cotización</a>
+                        <a href="#funciones" class="inline-flex items-center justify-center border-2 border-gold text-gold px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold hover:text-black transition-all text-center">Ver Funciones</a>
+                    </div>
+                    <div class="mt-10 flex items-center gap-6">
+                        <span class="text-gold text-xl">★★★★★</span>
+                        <div class="border-l border-gray-700 pl-6">
+                            <p class="font-semibold text-white">Tecnología Paraguaya</p>
+                            <p class="text-gray-500 text-sm">Integración oficial con CSJ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block animate-float">
+                    <div class="bg-black-card border border-gold-subtle rounded-2xl p-8 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <div class="inline-block bg-gold text-black rounded-xl px-6 py-3 font-bold text-sm">🏛️ PARA INSTITUCIONES</div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center bg-black-soft rounded-xl p-4 border border-gray-800">
+                                <span class="text-2xl mr-4">🏛️</span>
+                                <div>
+                                    <p class="font-semibold text-white">Direcciones Jurídicas</p>
+                                    <p class="text-sm text-gray-500">Control total de litigios</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-black-soft rounded-xl p-4 border border-gray-800">
+                                <span class="text-2xl mr-4">🏦</span>
+                                <div>
+                                    <p class="font-semibold text-white">Bancos y Cooperativas</p>
+                                    <p class="text-sm text-gray-500">Gestión de cartera judicial</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-black-soft rounded-xl p-4 border border-gray-800">
+                                <span class="text-2xl mr-4">⚖️</span>
+                                <div>
+                                    <p class="font-semibold text-white">Estudios Jurídicos</p>
+                                    <p class="text-sm text-gray-500">Múltiples clientes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="py-16 bg-black-soft border-y border-gold-subtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold gradient-text-gold mb-2">13,243+</div>
+                    <p class="text-gray-500 text-sm">Expedientes procesados</p>
+                </div>
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold gradient-text-gold mb-2">6,318</div>
+                    <p class="text-gray-500 text-sm">Juzgados mapeados</p>
+                </div>
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold gradient-text-gold mb-2">13</div>
+                    <p class="text-gray-500 text-sm">Materias judiciales</p>
+                </div>
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold gradient-text-gold mb-2">19</div>
+                    <p class="text-gray-500 text-sm">Circunscripciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Libro Digital Portable -->
+    <section class="py-20 bg-black-rich">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-black-card border border-gold rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <span class="text-6xl mr-4 mb-4 md:mb-0">📖</span>
+                    <div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-white">Libro Digital Portable</h2>
+                        <p class="text-gold font-semibold text-lg">Innovación revolucionaria en gestión de expedientes</p>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-lg mb-8">
+                    Un solo archivo HTML que contiene <strong class="text-white">TODO el expediente</strong> sin dependencias externas. Portabilidad máxima para compartir y consultar offline.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black-soft rounded-xl p-6 border border-gray-800">
+                        <h4 class="text-xl font-bold text-gold mb-4">✨ Características</h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start"><span class="text-gold mr-3">✓</span>Todos los PDFs embebidos en base64</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✓</span>PDF.js integrado (sin instalaciones)</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✓</span>Navegación interactiva por actuaciones</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✓</span>100% offline y portable</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✓</span>Un solo archivo para compartir</li>
+                        </ul>
+                    </div>
+                    <div class="bg-black-soft rounded-xl p-6 border border-gray-800">
+                        <h4 class="text-xl font-bold text-gold mb-4">🎯 Ventajas</h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start"><span class="text-gold mr-3">★</span>Envío por email, WhatsApp o Drive</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">★</span>Funciona sin internet</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">★</span>Compatible con cualquier navegador</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">★</span>Respaldo legal completo</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">★</span>Interfaz profesional y limpia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulos -->
+    <section id="funciones" class="py-20 bg-black-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-gold bg-opacity-20 border border-gold text-gold px-4 py-2 rounded-full text-sm font-semibold mb-4">⚡ MÓDULOS PROFESIONALES</div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Funciones <span class="gradient-text-gold">Completas</span></h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Herramientas profesionales de análisis jurídico con integración directa al sistema de Gestión Electrónica Judicial</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="card-premium rounded-2xl p-8">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Análisis de Inactividad</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Identifica expedientes con más de 5 meses sin movimiento judicial.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Detección automática de casos inactivos</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Cálculo preciso de inactividad</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Prevención de prescripción</li>
+                    </ul>
+                </div>
+
+                <div class="card-premium rounded-2xl p-8">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Regulación de Honorarios</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Monitorea regulaciones de honorarios profesionales en todos los expedientes.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Búsqueda de autos interlocutorios</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Control presupuestario de costas</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Auditoría de costos legales</li>
+                    </ul>
+                </div>
+
+                <div class="card-premium rounded-2xl p-8">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Recursos de Apelación</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Rastrea todos los recursos de apelación, casación y procesos accesorios.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Detección automática de recursos</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Control de plazos procesales</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Gestión proactiva de recursos</li>
+                    </ul>
+                </div>
+
+                <div class="card-premium rounded-2xl p-8">
+                    <div class="text-4xl mb-4">🔔</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Notificaciones</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Centraliza todas las notificaciones judiciales no leídas en un solo lugar.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Búsqueda automática de pendientes</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Cumplimiento de plazos legales</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Evita notificaciones por estrado</li>
+                    </ul>
+                </div>
+
+                <div class="card-premium rounded-2xl p-8">
+                    <div class="text-4xl mb-4">🗺️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Recopilador de Juzgados</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Mapea automáticamente todos los juzgados del país con sus datos actualizados.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>13 materias judiciales</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>19 circunscripciones</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Más de 300 juzgados catalogados</li>
+                    </ul>
+                </div>
+
+                <div class="card-premium rounded-2xl p-8 border-gold">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Funciones Avanzadas</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Capacidades profesionales de búsqueda, análisis y reportes.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Búsqueda masiva (13,243+ expedientes)</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Filtros inteligentes combinables</li>
+                        <li class="flex items-start"><span class="text-gold mr-2">✓</span>Exportación Excel completa</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Especificaciones Técnicas -->
+            <div class="bg-black-card border border-gold-subtle rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl font-bold mb-8 text-center text-white">Especificaciones Técnicas</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black-soft rounded-xl p-6 border border-gray-800">
+                        <h4 class="text-lg font-bold mb-4 text-gold">🔐 Seguridad</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>• Licencias mensuales con hash criptográfico</li>
+                            <li>• Protección contra manipulación</li>
+                            <li>• Alertas de vencimiento automáticas</li>
+                            <li>• Autenticación con contraseña maestra</li>
+                            <li>• Gestión segura de sesiones CSJ</li>
+                        </ul>
+                    </div>
+                    <div class="bg-black-soft rounded-xl p-6 border border-gray-800">
+                        <h4 class="text-lg font-bold mb-4 text-gold">💻 Tecnología</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>• Electron framework (Windows 10/11)</li>
+                            <li>• Procesamiento paralelo eficiente</li>
+                            <li>• Gestión optimizada hasta 8GB RAM</li>
+                            <li>• Integración directa con API CSJ</li>
+                            <li>• Compatible digital y no digital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Uso -->
+    <section class="py-20 bg-black-rich">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">¿Para quién es <span class="gradient-text-gold">ideal</span>?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-premium rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-4">🏛️</div>
+                    <h4 class="text-xl font-bold text-white mb-4">Direcciones Jurídicas</h4>
+                    <ul class="space-y-2 text-sm text-gray-400 text-left">
+                        <li>• Control total de litigios institucionales</li>
+                        <li>• Auditoría de gestión legal externa</li>
+                        <li>• Reportes ejecutivos para autoridades</li>
+                        <li>• Planificación presupuestaria de costas</li>
+                    </ul>
+                </div>
+                <div class="card-premium rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h4 class="text-xl font-bold text-white mb-4">Estudios Jurídicos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400 text-left">
+                        <li>• Gestión de cartera de casos</li>
+                        <li>• Seguimiento de múltiples clientes</li>
+                        <li>• Control de honorarios profesionales</li>
+                        <li>• Optimización de tiempo del equipo</li>
+                    </ul>
+                </div>
+                <div class="card-premium rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-4">🏦</div>
+                    <h4 class="text-xl font-bold text-white mb-4">Bancos y Cooperativas</h4>
+                    <ul class="space-y-2 text-sm text-gray-400 text-left">
+                        <li>• Monitoreo de cartera judicial</li>
+                        <li>• Gestión de cobranzas judiciales</li>
+                        <li>• Control de garantías y ejecuciones</li>
+                        <li>• Reportes consolidados institucionales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-20 bg-black-soft">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Solicita tu <span class="gradient-text-gold">Cotización</span></h2>
+                <p class="text-xl text-gray-400">Completa el formulario y te contactaremos a la brevedad</p>
+            </div>
+
+            <div class="bg-black-card border border-gold-subtle rounded-2xl p-8 md:p-12">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <input type="hidden" name="access_key" value="214f0c36-8853-4ef5-a08a-f87420487705">
+                    <input type="hidden" name="subject" value="Nueva consulta - Auditor Institucional">
+                    <input type="hidden" name="redirect" value="https://animuslex.app/gracias.html">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-300 mb-2">Nombre completo *</label>
+                            <input type="text" id="name" name="name" required class="input-premium w-full px-4 py-3 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required class="input-premium w-full px-4 py-3 rounded-lg">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-300 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="input-premium w-full px-4 py-3 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="institution" class="block text-sm font-semibold text-gray-300 mb-2">Institución / Estudio *</label>
+                            <input type="text" id="institution" name="institution" required class="input-premium w-full px-4 py-3 rounded-lg">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="expedientes" class="block text-sm font-semibold text-gray-300 mb-2">Cantidad aproximada de expedientes</label>
+                        <select id="expedientes" name="expedientes" class="input-premium w-full px-4 py-3 rounded-lg">
+                            <option value="">Selecciona una opción</option>
+                            <option value="1-100">1 - 100 expedientes</option>
+                            <option value="100-500">100 - 500 expedientes</option>
+                            <option value="500-1000">500 - 1,000 expedientes</option>
+                            <option value="1000-5000">1,000 - 5,000 expedientes</option>
+                            <option value="5000+">Más de 5,000 expedientes</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-300 mb-2">Mensaje *</label>
+                        <textarea id="message" name="message" rows="5" required class="input-premium w-full px-4 py-3 rounded-lg" placeholder="Cuéntanos sobre las necesidades de tu institución..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full btn-gold py-4 rounded-full text-lg font-bold">Solicitar Cotización</button>
+                </form>
+
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                    <p class="text-gray-500 mb-4">O contáctanos directamente:</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="https://wa.me/595984414946?text=Hola,%20quisiera%20información%20sobre%20Auditor%20Institucional" target="_blank" class="inline-flex items-center text-green-500 hover:text-green-400 font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                            +595 984 414 946
+                        </a>
+                        <span class="text-gray-700 hidden sm:inline">•</span>
+                        <span class="text-gray-500">Asunción, Paraguay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-black-rich border-t border-gold-subtle">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">Optimiza tu Gestión Judicial</h2>
+            <p class="text-xl mb-8 text-gray-400">La herramienta profesional que tu área legal necesita</p>
+            <a href="#contacto" class="inline-flex items-center justify-center btn-gold px-12 py-5 rounded-full text-xl font-bold">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black-soft border-t border-gold-subtle py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-gold text-xl mr-2">⚖️</span>
+                        <span class="text-xl font-semibold text-white">Auditor <span class="text-gold">Institucional</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Software de auditoría judicial profesional de Paraguay. Tecnología premium para instituciones.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-gold mb-4 uppercase tracking-wider">Enlaces</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#funciones" class="text-gray-500 hover:text-gold transition-colors text-sm">Funciones</a></li>
+                        <li><a href="#contacto" class="text-gray-500 hover:text-gold transition-colors text-sm">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-gold mb-4 uppercase tracking-wider">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://wa.me/595984414946" target="_blank" class="text-gray-500 hover:text-gold transition-colors flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="mr-2" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                            +595 984 414 946
+                        </a></li>
+                        <li class="text-gray-500 text-sm">Asunción, Paraguay</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="divider-gold my-8"></div>
+
+            <div class="bg-black-card rounded-xl p-6 mb-8 border border-gray-800">
+                <h4 class="text-sm font-semibold text-gold mb-3">⚖️ NOTA LEGAL</h4>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Software de gestión jurídica profesional que accede mediante autenticación oficial al sistema de Gestión Electrónica Judicial de la Corte Suprema de Justicia del Paraguay. La información procesada corresponde a expedientes judiciales de carácter público, accesibles con credenciales autorizadas. Herramienta desarrollada con fines de optimización de gestión legal institucional.
+                </p>
+            </div>
+
+            <div class="text-center text-xs text-gray-600">
+                <p>© 2026 Auditor Institucional. Todos los derechos reservados.</p>
+                <p class="mt-1">Desarrollado por AnimusLabs</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
