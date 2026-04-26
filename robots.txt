@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Disallow: /index.OLD.html.bak
+
+# Sitemap
+Sitemap: https://animuslex.app/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay para bots agresivos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
