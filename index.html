@@ -63,26 +63,55 @@
           "@type": "Organization",
           "@id": "https://animuslex.app/#organization",
           "name": "AnimusLabs",
+          "alternateName": "Animus Labs Paraguay",
           "url": "https://animuslex.app/",
-          "logo": "https://animuslex.app/logo.png",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://animuslex.app/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://animuslex.app/og-image.png",
           "description": "Firma paraguaya de tecnología legal. Desarrolladores de AnimusLex, plataforma de inteligencia artificial legal en producción.",
+          "slogan": "Inteligencia Artificial Legal en producción para Paraguay",
+          "foundingDate": "2025",
           "founder": {
             "@type": "Person",
-            "name": "Abg. Roberto Rodas"
+            "name": "Abg. Roberto Rodas",
+            "jobTitle": "Fundador",
+            "alumniOf": "Universidad Nacional de Asunción"
           },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Asunción",
+            "addressRegion": "Asunción",
             "addressCountry": "PY"
           },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "roberto@animuslex.app",
-            "telephone": "+595-984-414-946",
-            "contactType": "Sales",
-            "areaServed": "PY",
-            "availableLanguage": ["Spanish"]
-          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "email": "roberto@animuslex.app",
+              "telephone": "+595984414946",
+              "contactType": "sales",
+              "areaServed": "PY",
+              "availableLanguage": ["es", "Spanish"]
+            },
+            {
+              "@type": "ContactPoint",
+              "email": "roberto@animuslex.app",
+              "telephone": "+595984414946",
+              "contactType": "customer support",
+              "areaServed": "PY",
+              "availableLanguage": ["es", "Spanish"]
+            }
+          ],
+          "knowsAbout": [
+            "Inteligencia Artificial Legal",
+            "Derecho Procesal Paraguayo",
+            "Análisis de Expedientes Judiciales",
+            "Ley 4711/12 Desacato",
+            "Procedimiento Contencioso-Administrativo"
+          ],
           "sameAs": []
         },
         {
@@ -91,14 +120,25 @@
           "name": "AnimusLex",
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "LegalTech",
-          "operatingSystem": "Web",
+          "operatingSystem": "Web, Windows, macOS, Linux",
+          "image": "https://animuslex.app/og-image.png",
           "description": "Plataforma de inteligencia artificial legal en producción. Monitorea expedientes del Poder Judicial paraguayo, detecta riesgo penal en tiempo real (Ley 4711/12), prepara contestaciones automáticas, lee PDFs escaneados con OCR, genera dictámenes con citas a la legislación vigente paraguaya.",
           "offers": {
             "@type": "Offer",
-            "description": "Pilot de 30 días sin costo económico",
-            "availability": "https://schema.org/InStock"
+            "name": "Pilot 30 días sin costo",
+            "description": "Pilot de 30 días sin costo económico, sin compromiso de continuidad. Modelo comercial post-pilot a definir según volumen.",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-01-01",
+            "url": "https://animuslex.app/#contacto"
           },
           "creator": { "@id": "https://animuslex.app/#organization" },
+          "publisher": { "@id": "https://animuslex.app/#organization" },
+          "softwareVersion": "v4.11",
+          "datePublished": "2025-01-01",
+          "dateModified": "2026-05-01",
+          "inLanguage": "es-PY",
           "featureList": [
             "Detector de demandas nuevas",
             "Acceso a documentos del CSJ sin login por expediente",
