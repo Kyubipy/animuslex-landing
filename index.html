@@ -163,12 +163,119 @@
           "@type": "ProfessionalService",
           "@id": "https://animuslex.app/#service",
           "name": "AnimusLex · Servicio de IA Legal",
+          "image": "https://animuslex.app/og-image.png",
+          "url": "https://animuslex.app/",
+          "telephone": "+595984414946",
+          "email": "roberto@animuslex.app",
+          "priceRange": "$$",
+          "currenciesAccepted": "USD, PYG",
+          "paymentAccepted": "Transferencia bancaria, Crédito corporativo",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Asunción",
+            "addressRegion": "Asunción",
+            "addressCountry": "PY"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -25.2637,
+            "longitude": -57.5759
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
           "provider": { "@id": "https://animuslex.app/#organization" },
           "areaServed": {
             "@type": "Country",
             "name": "Paraguay"
           },
-          "serviceType": "Legal Technology / Inteligencia Artificial Jurídica"
+          "serviceType": "Legal Technology / Inteligencia Artificial Jurídica",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Catálogo de servicios AnimusLex",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Monitoreo de cartera judicial en tiempo real",
+                  "description": "Vigilancia automatizada 24/7 de expedientes activos en el portal del Poder Judicial paraguayo."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Detección de riesgo penal Ley 4711/12",
+                  "description": "Radar Penal con clasificación en 4 pilares de gravedad y alertas urgentes por mail."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Análisis profundo de expedientes con IA",
+                  "description": "Lectura completa del expediente (incluso PDFs escaneados con OCR) y generación de dictamen ejecutivo."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Auditoría independiente de abogados externos",
+                  "description": "Informes de performance de cualquier abogado o estudio sin necesidad de solicitar información al propio abogado."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://animuslex.app/#howto-pilot",
+          "name": "Cómo iniciar el Pilot de 30 días gratis con AnimusLex",
+          "description": "Guía paso a paso para activar el pilot sin costo de la plataforma de IA legal AnimusLex en su organización.",
+          "image": "https://animuslex.app/og-image.png",
+          "totalTime": "P30D",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "value": "0"
+          },
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Solicitar demostración",
+              "text": "Contactar vía formulario en animuslex.app o por mail a roberto@animuslex.app para agendar reunión inicial de 15 minutos."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Reunión de presentación",
+              "text": "Reunión técnica con la asesoría jurídica del cliente para conocer sus dolores específicos y validar fit del producto."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Conexión a muestra de cartera",
+              "text": "Configuración de AnimusLex con una muestra representativa de la cartera judicial del cliente. Sin instalación, todo en la nube."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "30 días de operación libre",
+              "text": "El equipo legal opera la plataforma durante 30 días sin compromiso económico. Reciben alertas, dictámenes y reportes diarios automáticos."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Evaluación de resultados",
+              "text": "Revisión conjunta de métricas: casos críticos detectados, plazos salvados, horas-abogado liberadas, contestaciones preparadas. Si convence, se firma; si no, no hay nada que firmar."
+            }
+          ]
         },
         {
           "@type": "FAQPage",
@@ -418,7 +525,8 @@
                 <span class="text-2xl font-semibold text-white tracking-tight">Animus<span class="text-gold">Lex</span></span>
             </div>
             <div class="flex gap-6 items-center">
-                <a href="#caso" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Caso real</a>
+                <a href="servicios.html" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Servicios</a>
+                <a href="casos-de-uso.html" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Casos</a>
                 <a href="#sistema" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Sistema</a>
                 <a href="#sectores" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Sectores</a>
                 <a href="#contacto" class="btn-gold px-6 py-2 rounded-full text-sm font-bold">Pilot 30 días</a>
@@ -856,7 +964,8 @@
                 <div>
                     <h4 class="text-sm font-semibold text-gold mb-4 uppercase tracking-wider">Plataforma</h4>
                     <ul class="space-y-2">
-                        <li><a href="#caso" class="text-cream-muted hover:text-gold transition-colors text-sm">Caso real</a></li>
+                        <li><a href="servicios.html" class="text-cream-muted hover:text-gold transition-colors text-sm">Servicios</a></li>
+                        <li><a href="casos-de-uso.html" class="text-cream-muted hover:text-gold transition-colors text-sm">Casos de uso</a></li>
                         <li><a href="#sistema" class="text-cream-muted hover:text-gold transition-colors text-sm">Sistema</a></li>
                         <li><a href="#sectores" class="text-cream-muted hover:text-gold transition-colors text-sm">Sectores</a></li>
                         <li><a href="#contacto" class="text-cream-muted hover:text-gold transition-colors text-sm">Pilot 30 días</a></li>
