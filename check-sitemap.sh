@@ -23,10 +23,12 @@ for f in *.html; do
     fi
 done
 
-# Articulos blog (carpetas con index.html)
+# Articulos blog (SOLO los tracked en git — los untracked son drafts no deployados)
 for d in blog/*/; do
     name=$(basename "$d")
     [ -f "$d/index.html" ] || continue
+    # Skip si el index.html del articulo no esta tracked (es un draft)
+    git ls-files --error-unmatch "$d/index.html" >/dev/null 2>&1 || continue
     echo "https://animuslex.app/blog/$name/" >> "$REAL"
 done
 
