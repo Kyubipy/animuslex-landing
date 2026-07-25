@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /index.OLD.html.bak
 
 # Sitemap
 Sitemap: https://animuslex.app/sitemap.xml
