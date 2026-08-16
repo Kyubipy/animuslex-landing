@@ -48,9 +48,15 @@
   </url>
   <url>
     <loc>https://animuslex.app/blog/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://animuslex.app/blog/resolucion-12677-csj-ia-poder-judicial-paraguay/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://animuslex.app/blog/despidos-por-ia-caso-amazon-derecho-laboral-paraguay/</loc>
