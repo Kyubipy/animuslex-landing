@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://animuslex.app/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-PY" href="https://animuslex.app/" />
@@ -48,9 +48,15 @@
   </url>
   <url>
     <loc>https://animuslex.app/blog/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://animuslex.app/blog/app-animuslex-expedientes-poder-judicial-android/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://animuslex.app/blog/resolucion-12677-csj-ia-poder-judicial-paraguay/</loc>

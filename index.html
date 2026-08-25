@@ -322,6 +322,26 @@
           ]
         },
         {
+          "@type": "MobileApplication",
+          "@id": "https://animuslex.app/#app",
+          "name": "AnimusLex",
+          "operatingSystem": "Android 7.0 o superior",
+          "applicationCategory": "BusinessApplication",
+          "description": "App para abogados matriculados en Paraguay: tus expedientes del Poder Judicial en el teléfono, con sus documentos, y el expediente completo en un solo archivo numerado y ordenado por fecha. Entrás con tu cuenta de apps.csj.gov.py — tu contraseña no se ve, no se envía y no se guarda.",
+          "installUrl": "https://play.google.com/store/apps/details?id=com.animus.animuslex",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "publisher": { "@type": "Organization", "name": "AnimusLabs Paraguay", "url": "https://animuslex.app/" },
+          "image": "https://animuslex.app/img-app/icono-512.png",
+          "screenshot": [
+            "https://animuslex.app/img-app/captura-cartera.webp",
+            "https://animuslex.app/img-app/captura-detalle.webp",
+            "https://animuslex.app/img-app/captura-buscador.webp"
+          ],
+          "softwareVersion": "2.0.0",
+          "inLanguage": "es-PY",
+          "countriesSupported": "PY"
+        },
+        {
           "@type": "FAQPage",
           "@id": "https://animuslex.app/#faq",
           "mainEntity": [
@@ -391,9 +411,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -574,6 +591,7 @@
                 <a href="servicios.html" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Servicios</a>
                 <a href="casos-de-uso.html" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">Casos</a>
                 <a href="#sistema" class="text-cream-soft hover:text-gold font-medium transition-colors hidden lg:block text-sm">Sistema</a>
+                <a href="#app" class="text-cream-soft hover:text-gold font-medium transition-colors hidden md:block text-sm">App</a>
                 <a href="/blog/" class="text-gold hover:text-cream-soft font-medium transition-colors text-sm border border-gold-subtle hover:border-gold rounded-full px-4 py-2">Blog</a>
                 <a href="#contacto" class="btn-gold px-6 py-2 rounded-full text-sm font-bold">Pilot 30 días</a>
             </div>
@@ -581,7 +599,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="relative gradient-bg-dark text-white py-24 lg:py-32 overflow-hidden">
+    <section id="hero-main" class="relative gradient-bg-dark text-white py-24 lg:py-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-5xl mx-auto slide-in">
                 <span class="badge-live mb-6 inline-flex">En producción · Asunción</span>
@@ -598,6 +616,10 @@
                     </a>
                     <a href="#caso" class="btn-outline-gold px-10 py-4 rounded-full text-lg font-bold inline-flex items-center justify-center">
                         Ver caso real
+                    </a>
+                    <a href="#app" class="btn-outline-gold px-10 py-4 rounded-full text-lg font-bold inline-flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                        La app en Google Play
                     </a>
                 </div>
                 <p class="text-sm text-cream-faint">⚡ Implementación sin headcount adicional · Compatible con pronunciamiento CSJ sobre uso de IA en el Poder Judicial</p>
@@ -672,6 +694,94 @@
     </script>
 
     <!-- KPIs / Caso Real -->
+    <!-- APP ANIMUSLEX EN GOOGLE PLAY -->
+    <section id="app" class="py-24 bg-black-deeper relative overflow-hidden border-y border-gold-faint">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-14">
+                <span class="badge-live mb-6 inline-flex">Nuevo · Gratis en Google Play</span>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    <span class="gradient-text-gold">AnimusLex</span> — tus expedientes del Poder Judicial, en el teléfono
+                </h2>
+                <p class="text-xl text-cream-soft leading-relaxed">
+                    Entrás con tu cuenta de apps.csj.gov.py y ves tus causas con sus documentos.
+                    Sin buscar expediente por expediente. Gratis.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-14">
+                <!-- Capturas -->
+                <div class="flex justify-center gap-4">
+                    <img src="/img-app/captura-cartera.webp" alt="App AnimusLex — cartera de expedientes del Poder Judicial ordenada por movimiento más reciente" width="640" height="1386" loading="lazy" class="w-40 lg:w-48 rounded-2xl border border-gold-subtle shadow-2xl">
+                    <img src="/img-app/captura-detalle.webp" alt="App AnimusLex — detalle de un expediente con sus actuaciones y documentales adjuntas" width="640" height="1386" loading="lazy" class="w-40 lg:w-48 rounded-2xl border border-gold-subtle shadow-2xl mt-8">
+                    <img src="/img-app/captura-buscador.webp" alt="App AnimusLex — buscador de causas por carátula, número o nombre de una parte" width="640" height="1386" loading="lazy" class="w-40 lg:w-48 rounded-2xl border border-gold-subtle shadow-2xl hidden sm:block">
+                </div>
+
+                <!-- Qué hace -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gold mb-5">Qué hace</h3>
+                    <ul class="space-y-3 text-cream-soft">
+                        <li class="flex gap-3"><span class="text-gold">·</span> Tu cartera completa, ordenada por movimiento más reciente</li>
+                        <li class="flex gap-3"><span class="text-gold">·</span> Buscador por carátula, por número (333/2023) o por el nombre de una parte</li>
+                        <li class="flex gap-3"><span class="text-gold">·</span> El detalle de cada causa, con sus partes y sus abogados</li>
+                        <li class="flex gap-3"><span class="text-gold">·</span> Cada actuación con su documento, para abrir y leer</li>
+                        <li class="flex gap-3"><span class="text-gold">·</span> Las documentales adjuntas de cada escrito</li>
+                        <li class="flex gap-3"><span class="text-gold font-bold">★</span> <span><strong class="text-white">El expediente COMPLETO en un solo archivo</strong>, numerado y ordenado por fecha — lo que el portal no hace: allá se baja documento por documento</span></li>
+                        <li class="flex gap-3"><span class="text-gold">·</span> Modo oscuro</li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="https://play.google.com/store/apps/details?id=com.animus.animuslex" target="_blank" rel="noopener" class="btn-gold px-10 py-4 rounded-full text-lg font-bold inline-flex items-center gap-3">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                            Descargar en Google Play
+                        </a>
+                        <p class="text-cream-faint text-sm mt-3">Gratis · Android 7.0 o superior · Solo requiere internet</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Entrás una vez -->
+                <div class="p-6 rounded-2xl" style="background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.25);">
+                    <h4 class="text-gold font-bold text-lg mb-3">Entrás una vez</h4>
+                    <p class="text-cream-soft text-sm leading-relaxed mb-3">
+                        El portal del Poder Judicial te hace loguearte cada vez que volvés. AnimusLex no:
+                        entrás una sola vez y nosotros mantenemos la conexión desde nuestro servidor.
+                        Cerrá la app, apagá el teléfono, pasá días sin abrirla — cuando vuelvas, tus
+                        expedientes están al día.
+                    </p>
+                    <p class="text-cream-muted text-xs leading-relaxed">
+                        (Si entrás al portal desde tu computadora, el Poder Judicial reemplaza la sesión
+                        de la app por la tuya y hay que volver a vincularla. Son dos toques.)
+                    </p>
+                </div>
+                <!-- Tu contraseña -->
+                <div class="p-6 rounded-2xl" style="background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.25);">
+                    <h4 class="text-gold font-bold text-lg mb-3">Tu contraseña es tuya</h4>
+                    <p class="text-cream-soft text-sm leading-relaxed">
+                        Entrás en la página del Poder Judicial, dentro de la app. Tu contraseña no la
+                        vemos, no la mandamos a ningún lado y no la guardamos. Lo único que se guarda
+                        es el token de sesión que el propio portal genera — el mismo que usa cualquier
+                        navegador.
+                    </p>
+                </div>
+                <!-- Qué NO hace -->
+                <div class="p-6 rounded-2xl" style="background: rgba(139,0,0,0.12); border: 1px solid rgba(212,175,55,0.35);">
+                    <h4 class="text-gold font-bold text-lg mb-3">Qué NO hace</h4>
+                    <p class="text-cream-soft text-sm leading-relaxed mb-3">
+                        AnimusLex no calcula plazos ni avisa de vencimientos. Muestra lo que el Poder
+                        Judicial publica, con la fecha en que lo trajimos. La responsabilidad profesional
+                        sobre los plazos sigue siendo tuya.
+                    </p>
+                    <p class="text-cream-muted text-xs leading-relaxed">En camino: alertas de plazos y vencimientos.</p>
+                </div>
+            </div>
+
+            <p class="text-center text-cream-muted text-sm mt-10 max-w-2xl mx-auto">
+                La app es para abogados matriculados con cuenta en apps.csj.gov.py — sin esa cuenta
+                no hay expedientes que mostrar.
+            </p>
+        </div>
+    </section>
+
     <section id="caso" class="py-20 bg-black-soft border-y border-gold-faint">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
