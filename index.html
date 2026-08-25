@@ -322,6 +322,18 @@
           ]
         },
         {
+          "@type": "VideoObject",
+          "@id": "https://animuslex.app/#app-video",
+          "name": "AnimusLex — la app de expedientes del Poder Judicial, en 20 segundos",
+          "description": "Recorrido por la app AnimusLex para Android: vinculación de la cuenta del Poder Judicial sin compartir la contraseña, cartera de expedientes al día, documentos de cada actuación, buscador de causas y la descarga del expediente completo en un solo archivo.",
+          "thumbnailUrl": "https://animuslex.app/img-app/video-app-poster.jpg",
+          "contentUrl": "https://animuslex.app/img-app/video-app.mp4",
+          "uploadDate": "2026-08-25",
+          "duration": "PT21S",
+          "inLanguage": "es-PY",
+          "publisher": { "@type": "Organization", "name": "AnimusLabs Paraguay", "url": "https://animuslex.app/" }
+        },
+        {
           "@type": "MobileApplication",
           "@id": "https://animuslex.app/#app",
           "name": "AnimusLex",
@@ -709,11 +721,16 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 items-center mb-14">
-                <!-- Capturas -->
-                <div class="flex justify-center gap-4">
-                    <img src="/img-app/captura-cartera.webp" alt="App AnimusLex — cartera de expedientes del Poder Judicial ordenada por movimiento más reciente" width="640" height="1386" loading="lazy" class="w-40 lg:w-48 rounded-2xl border border-gold-subtle shadow-2xl">
-                    <img src="/img-app/captura-detalle.webp" alt="App AnimusLex — detalle de un expediente con sus actuaciones y documentales adjuntas" width="640" height="1386" loading="lazy" class="w-40 lg:w-48 rounded-2xl border border-gold-subtle shadow-2xl mt-8">
-                    <img src="/img-app/captura-buscador.webp" alt="App AnimusLex — buscador de causas por carátula, número o nombre de una parte" width="640" height="1386" loading="lazy" class="w-40 lg:w-48 rounded-2xl border border-gold-subtle shadow-2xl hidden sm:block">
+                <!-- Video demo -->
+                <div class="flex justify-center">
+                    <video autoplay muted loop playsinline preload="metadata"
+                           poster="/img-app/video-app-poster.jpg"
+                           width="540" height="960"
+                           class="w-64 lg:w-80 rounded-3xl border border-gold-subtle shadow-2xl"
+                           aria-label="Recorrido en video por la app AnimusLex: vinculación de la cuenta del Poder Judicial, cartera de expedientes, documentos de cada actuación, buscador y descarga del expediente completo">
+                        <source src="/img-app/video-app.mp4" type="video/mp4">
+                        <img src="/img-app/captura-cartera.webp" alt="App AnimusLex — cartera de expedientes del Poder Judicial" width="640" height="1386" class="w-64 rounded-3xl border border-gold-subtle">
+                    </video>
                 </div>
 
                 <!-- Qué hace -->
