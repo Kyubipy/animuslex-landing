@@ -48,9 +48,15 @@
   </url>
   <url>
     <loc>https://animuslex.app/blog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://animuslex.app/blog/ia-juridica-chatbot-vs-sistema-real/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://animuslex.app/blog/app-animuslex-expedientes-poder-judicial-android/</loc>
