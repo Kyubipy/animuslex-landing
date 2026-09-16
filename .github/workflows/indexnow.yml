@@ -1,0 +1,55 @@
+name: IndexNow (aviso a buscadores tras cada publicación)
+
+# El vigilante cloud no puede llamar a api.indexnow.org (egress bloqueado).
+# GitHub Actions sí: en cada push a main mapea los archivos cambiados a URLs
+# públicas, espera al auto-deploy de Render y avisa a los buscadores.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mapear archivos cambiados a URLs
+        id: urls
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then BEFORE="${{ github.sha }}~1"; fi
+          git diff --name-only "$BEFORE" "${{ github.sha }}" > changed.txt || true
+          python3 - <<'PY'
+          import json, re
+          host = "https://animuslex.app"
+          urls = {host + "/"}
+          for f in open("changed.txt").read().split():
+              if f == "index.html":
+                  continue
+              if f == "sitemap.xml" or f == "blog/index.html":
+                  urls.add(host + "/blog/"); continue
+              m = re.fullmatch(r"blog/([a-z0-9-]+)/index\.html", f)
+              if m:
+                  urls.add(f"{host}/blog/{m.group(1)}/"); urls.add(host + "/blog/"); continue
+              m = re.fullmatch(r"([a-z0-9-]+)\.html", f)
+              if m and not m.group(1).startswith("_"):
+                  urls.add(f"{host}/{m.group(1)}.html")
+          json.dump({"host": "animuslex.app",
+                     "key": "ea79237607914340bf2bdf670123beb7",
+                     "keyLocation": f"{host}/ea79237607914340bf2bdf670123beb7.txt",
+                     "urlList": sorted(urls)}, open("payload.json", "w"))
+          print("URLs a avisar:", *sorted(urls), sep="\n  ")
+          PY
+
+      - name: Esperar al auto-deploy de Render
+        run: sleep 150
+
+      - name: Ping IndexNow
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" --data @payload.json)
+          echo "IndexNow HTTP $code"
+          case "$code" in 200|202) exit 0;; *) echo "::warning::IndexNow respondió $code"; exit 0;; esac
