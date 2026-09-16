@@ -142,10 +142,10 @@
             <section>
                 <h2>El problema que casi nadie ve hasta que es tarde</h2>
                 <p>
-                    La Ley N° 4711/12 de Paraguay tipifica el <strong>desacato a la autoridad judicial</strong> como delito penal aplicable a funcionarios públicos. En la práctica, esto significa que cuando una resolución judicial firme intima a una institución del Estado (un municipio, un ministerio, un organismo descentralizado) a hacer o pagar algo, y la institución incumple repetidamente, el juez puede librar oficio al Ministerio Público pidiendo la apertura de una causa penal.
+                    La Ley N° 4711/12 de Paraguay tipifica el <strong>desacato de orden judicial</strong>: incumplir una orden escrita dictada en legal forma por autoridad judicial competente, con pena de seis meses a dos años o multa. Si el autor es funcionario público o medió apercibimiento escrito previo, la pena puede elevarse hasta cinco años y deja de ser sustituible por multa. Es un tipo doloso: no toda mora de una institución configura el delito. En la práctica, cuando una resolución judicial firme intima a una institución del Estado (un ministerio, un ente descentralizado, un gobierno local) a hacer o pagar algo y la orden se incumple, el juez tiene el deber legal de informar el hecho al fiscal penal de turno (art. 1°, último párrafo) — lo que se materializa librando oficio o remitiendo copias autenticadas al Ministerio Público, que es quien impulsa la causa.
                 </p>
                 <p>
-                    El detalle clave es este: <strong>el desacato no aparece de un día para otro</strong>. Hay una secuencia típica de actos procesales que lo preceden, distribuida a lo largo de meses y a veces años, dentro de expedientes que pueden tener cientos de actuaciones cada uno. Para una asesoría jurídica que monitorea cientos o miles de juicios simultáneamente, detectar manualmente esa secuencia es prácticamente imposible.
+                    El detalle clave es este: <strong>el oficio a la Fiscalía no aparece de un día para otro</strong>. Hay una secuencia típica de actos procesales que en la práctica forense lo preceden, distribuida a lo largo de meses y a veces años, dentro de expedientes que pueden tener cientos de actuaciones cada uno. Para una asesoría jurídica que monitorea cientos o miles de juicios simultáneamente, detectar manualmente esa secuencia es prácticamente imposible.
                 </p>
                 <p>
                     Cuando finalmente sale el oficio al Ministerio Público, suele ser por sorpresa. Y a esa altura ya hay funcionarios concretos (no la institución abstracta) en riesgo de imputación penal.
@@ -158,12 +158,12 @@
                     AnimusLex implementa un módulo específico —el <strong>Radar Penal</strong>— que escanea las actuaciones procesales de cada expediente activo donde la Administración Pública es demandada, incluyendo procesos accesorios como regulaciones de honorarios profesionales (RHPs) y recursos de apelación.
                 </p>
                 <p>
-                    Para cada actuación, el sistema busca patrones lingüísticos que indican riesgo de derivación penal. Y los clasifica en cuatro pilares de gravedad, basados en jurisprudencia paraguaya y experiencia real con causas que terminaron en denuncia.
+                    Para cada actuación, un motor de análisis propio evalúa el riesgo de derivación penal y lo clasifica en cuatro pilares de gravedad, construidos sobre la práctica forense y la experiencia real con causas que terminaron en denuncia.
                 </p>
 
                 <h3>Pilar 1 — Fiscalía activa</h3>
                 <div class="pilar-card">
-                    El más grave. Hay un oficio efectivamente librado al Ministerio Público o al Agente Fiscal, copias autenticadas remitidas, denuncia penal directa. Cuando aparece este pilar, ya hay una causa penal abierta o por abrirse contra funcionarios concretos.
+                    El más grave. Hay un oficio efectivamente librado al Ministerio Público en sede penal (fiscal penal de turno o unidad penal), copias autenticadas remitidas, denuncia penal directa. Las vistas de rutina al agente fiscal en lo civil no cuentan como riesgo penal. Cuando aparece este pilar, ya hay una causa penal abierta o por abrirse contra funcionarios concretos.
                 </div>
 
                 <h3>Pilar 2 — Desacato explícito</h3>
@@ -173,7 +173,7 @@
 
                 <h3>Pilar 3 — Incumplimiento grave</h3>
                 <div class="pilar-card">
-                    Aparecen frases como "orden judicial incumplida", "resistencia a la autoridad", "desobediencia" o terceras intimaciones bajo apercibimiento de ley. Es el escalón inmediatamente anterior al desacato explícito.
+                    Aparecen expresiones como "orden judicial incumplida" o terceras intimaciones bajo apercibimiento de ley. En la práctica forense, es el escalón que suele preceder al apercibimiento de desacato explícito.
                 </div>
 
                 <h3>Pilar 4 — Preventivo</h3>
@@ -185,10 +185,10 @@
             <section>
                 <h2>Por qué la IA es necesaria (y por qué buscar manualmente falla)</h2>
                 <p>
-                    Una asesoría jurídica de la administración pública paraguaya promedio maneja entre 500 y 7.000 expedientes activos. Cada expediente puede tener entre 30 y 500 actuaciones procesales, distribuidas en el proceso principal y en procesos accesorios (regulaciones de honorarios, recursos, ejecuciones).
+                    Una asesoría jurídica de la administración pública puede manejar cientos o miles de expedientes activos a la vez. Cada expediente puede acumular decenas o cientos de actuaciones procesales, distribuidas en el proceso principal y en procesos accesorios (regulaciones de honorarios, recursos, ejecuciones).
                 </p>
                 <p>
-                    Las palabras clave que disparan el riesgo (oficio MP, agente fiscal, desacato, ley 4711, astreintes, apercibimiento, reiteración) pueden aparecer en cualquier actuación, sin orden temporal predecible y en redacciones jurídicas que varían según el juzgado, el ministerio actuante y el período histórico de la causa.
+                    Las señales de riesgo pueden aparecer en cualquier actuación, sin orden temporal predecible y en redacciones jurídicas que varían según el juzgado, el ministerio actuante y el período histórico de la causa.
                 </p>
                 <p>
                     Hacer este análisis manualmente requiere abrir cada expediente, leer cada actuación, decidir el pilar de riesgo, y mantener una hoja de seguimiento actualizada. Para 6.700 expedientes, esto se traduce en <strong>33.000+ horas-persona</strong> sólo para un primer barrido completo. Es inviable.
@@ -209,7 +209,7 @@
                     <li>Decenas de Pilar 4 (preventivo) — con astreintes acumuladas que en algunos casos superaban los Gs. 30.000.000 por mora.</li>
                 </ul>
                 <p>
-                    El sistema envía emails de alerta urgente al director de Asuntos Jurídicos cuando aparece un nuevo Pilar 1, con un resumen del caso, las actuaciones disparadoras y un análisis profundo del expediente generado por IA con citas a jurisprudencia paraguaya aplicable.
+                    El sistema envía emails de alerta urgente al responsable jurídico de la institución cuando aparece un nuevo Pilar 1, con un resumen del caso, las actuaciones disparadoras y un análisis profundo del expediente generado por IA con citas a la legislación paraguaya aplicable.
                 </p>
             </section>
 
@@ -220,10 +220,10 @@
                 </p>
                 <ul>
                     <li><a href="/inteligencia-artificial-paraguay.html" class="text-gold-soft hover:underline">Monitoreo automatizado 24/7 de expedientes</a> en el portal del Poder Judicial</li>
-                    <li>Lectura de PDFs escaneados con OCR + Claude Vision (incluso documentos con firma digital)</li>
-                    <li>Análisis profundo de expedientes con IA y citas a legislación paraguaya verificada (Ley 7.021/2022 de Contrataciones, Ley 3.966/10 Orgánica Municipal, Ley 6.715/2021 de Procedimientos Administrativos, Ley 6.822/2021 de firma digital, etc.)</li>
+                    <li>Lectura de PDFs escaneados con OCR asistido por IA de visión (incluso documentos con firma digital)</li>
+                    <li>Análisis profundo de expedientes con IA y citas a legislación paraguaya verificada (Ley 7.021/2022 de Contrataciones, Ley 6.715/2021 de Procedimientos Administrativos, Ley 6.822/2021 de servicios de confianza y documento electrónico, Ley 1.462/35 de lo contencioso-administrativo, etc.)</li>
                     <li>Detección de patrones de litigio repetido (mismos demandantes, mismos juzgados)</li>
-                    <li>Búsqueda inteligente sobre 58.000+ fallos de la CSJ usando sumarización con LLMs locales</li>
+                    <li>Búsqueda inteligente sobre 58.000+ fallos de la CSJ con sumarización asistida por IA</li>
                 </ul>
                 <p>
                     Ver el detalle completo en <a href="/casos-de-uso.html" class="text-gold-soft hover:underline">casos de uso</a> y <a href="/servicios.html" class="text-gold-soft hover:underline">servicios disponibles</a>.

@@ -164,7 +164,7 @@
 
         <article class="caso-card">
             <h3>Caso 1 · Detección de Pilar 1 sin la palabra "desacato"</h3>
-            <h2 class="titulo">Oficio a Fiscalía Penal contra funcionario público — alerta automática 12 horas antes del riesgo legal real</h2>
+            <h2 class="titulo">Oficio a Fiscalía Penal contra funcionario público — alerta automática en el momento en que aparece la orden de remisión al Agente Fiscal</h2>
             <p class="text-cream-soft leading-relaxed mb-4">Un expediente laboral entre un ex-funcionario y una institución pública paraguaya escaló a Pilar 1 cuando el juez ordenó remitir copias autenticadas al Agente Fiscal. <strong class="text-white">El texto de la actuación no incluía la palabra "desacato"</strong>, lo cual hubiese pasado inadvertido en una revisión humana de cartera. AnimusLex lo detectó automáticamente vía análisis de patrón Ley 4711/12.</p>
             <p class="text-cream-soft leading-relaxed mb-6">La asesoría jurídica fue alertada por mail dentro de los 60 segundos posteriores a la sincronización. Esto permitió preparar la respuesta legal antes que el caso escalara más.</p>
             <div>
@@ -179,7 +179,7 @@
             <h3>Caso 2 · Auditoría de cartera tercerizada</h3>
             <h2 class="titulo">131 expedientes analizados, 11 confirmados con condena pendiente, 37 pendientes de verificación</h2>
             <p class="text-cream-soft leading-relaxed mb-4">Una institución paraguaya solicitó cruzar una lista presupuestaria con su cartera judicial para identificar montos comprometidos. AnimusLex automatizó el cruce de carátulas, partes, abogados intervinientes y procesos accesorios.</p>
-            <p class="text-cream-soft leading-relaxed mb-6">El sistema descubrió que algunos PDFs antiguos del CSJ pre-2015 son en realidad <strong class="text-white">archivos HTML exportados de Word</strong> (no PDFs verdaderos). El módulo de lectura adaptó automáticamente la extracción de texto. Resultado: <strong class="text-gold">11 casos confirmados textualmente con condena, totalizando Gs. 1.877 millones</strong>.</p>
+            <p class="text-cream-soft leading-relaxed mb-6">El sistema descubrió que algunos PDFs antiguos del CSJ pre-2015 son en realidad <strong class="text-white">archivos HTML exportados de Word</strong> (no PDFs verdaderos). El módulo de lectura adaptó automáticamente la extracción de texto. Resultado: <strong class="text-gold">11 casos confirmados con condena, totalizando Gs. 1.877 millones</strong>.</p>
             <div>
                 <span class="metric">📁 131 PDFs leídos</span>
                 <span class="metric">✓ 11 confirmados</span>
@@ -192,7 +192,7 @@
             <h3>Caso 3 · Detección de cambio silencioso de abogado</h3>
             <h2 class="titulo">Estudio externo cambia caso a otro estudio sin avisar al cliente — detectado automáticamente al sincronizar</h2>
             <p class="text-cream-soft leading-relaxed mb-4">Una institución contrató originalmente al Estudio "A" para llevar 50+ expedientes activos. Tras 6 meses de operación, AnimusLex detectó por sincronización rutinaria que <strong class="text-white">3 expedientes habían cambiado el abogado patrocinante</strong>: ahora figuraba el Estudio "B" sin que el cliente hubiese sido notificado por el original.</p>
-            <p class="text-cream-soft leading-relaxed mb-6">El sistema mantiene un <code class="bg-borgona-deep px-2 py-1 rounded text-gold">historialAbogados[]</code> dentro de cada expediente con <code class="bg-borgona-deep px-2 py-1 rounded text-gold">{rol, de, a, fecha}</code>. Mail automático al área legal del cliente con 24 horas de antelación al primer evento procesal del nuevo estudio.</p>
+            <p class="text-cream-soft leading-relaxed mb-6">El sistema mantiene un historial trazable de los cambios de abogado de cada expediente. Mail automático al área legal del cliente con 24 horas de antelación al primer evento procesal del nuevo estudio.</p>
             <div>
                 <span class="metric">🔄 3 cambios detectados</span>
                 <span class="metric">👁️ Sin solicitar info al abogado</span>
