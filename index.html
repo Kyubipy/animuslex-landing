@@ -1109,13 +1109,29 @@
                     <input type="hidden" name="redirect" value="https://animuslex.app/gracias.html">
                     <input type="checkbox" name="botcheck" class="hidden" style="display:none">
 
+                    <div class="p-4 rounded-lg border border-gold-subtle text-sm text-cream-soft" style="background: rgba(212,175,55,0.06);">
+                        <p><strong class="text-gold">Este formulario es para conocer AnimusLex</strong>: la app gratuita para abogados y los sistemas a medida para estudios e instituciones. <strong class="text-white">No evacuamos consultas jurídicas sobre causas concretas</strong> ni emitimos dictámenes por este medio.</p>
+                        <p class="mt-2">¿Solo querés la app? Es gratis: <a href="https://play.google.com/store/apps/details?id=com.animus.animuslex" target="_blank" rel="noopener" class="text-gold font-semibold underline">descargala en Google Play</a>.</p>
+                    </div>
+
+                    <div>
+                        <label for="interes" class="block text-sm font-semibold text-cream-strong mb-2">¿Qué te interesa? *</label>
+                        <select id="interes" name="interes" required class="input-premium w-full px-4 py-3 rounded-lg">
+                            <option value="">Seleccionar...</option>
+                            <option value="Sistema a medida para mi estudio o institucion">Un sistema a medida para mi estudio o institución</option>
+                            <option value="Demostracion">Una demostración</option>
+                            <option value="Ayuda con la app gratuita">Ayuda con la app gratuita</option>
+                            <option value="Otra consulta sobre AnimusLex">Otra consulta sobre AnimusLex</option>
+                        </select>
+                    </div>
+
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-semibold text-cream-strong mb-2">Nombre completo *</label>
                             <input type="text" id="name" name="name" required class="input-premium w-full px-4 py-3 rounded-lg">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-cream-strong mb-2">Email institucional *</label>
+                            <label for="email" class="block text-sm font-semibold text-cream-strong mb-2">Email *</label>
                             <input type="email" id="email" name="email" required class="input-premium w-full px-4 py-3 rounded-lg">
                         </div>
                     </div>
@@ -1126,8 +1142,8 @@
                             <input type="tel" id="phone" name="phone" class="input-premium w-full px-4 py-3 rounded-lg">
                         </div>
                         <div>
-                            <label for="institution" class="block text-sm font-semibold text-cream-strong mb-2">Institución / Firma *</label>
-                            <input type="text" id="institution" name="institution" required class="input-premium w-full px-4 py-3 rounded-lg">
+                            <label for="institution" class="block text-sm font-semibold text-cream-strong mb-2">Estudio / Institución *</label>
+                            <input type="text" id="institution" name="institution" required class="input-premium w-full px-4 py-3 rounded-lg" placeholder="Nombre del estudio o institución, o «particular»">
                         </div>
                     </div>
 
@@ -1162,8 +1178,8 @@
                     </div>
 
                     <div>
-                        <label for="message" class="block text-sm font-semibold text-cream-strong mb-2">¿Qué problema querés resolver? *</label>
-                        <textarea id="message" name="message" rows="5" required class="input-premium w-full px-4 py-3 rounded-lg" placeholder="Contanos brevemente: cuál es el dolor principal, cuántos abogados hoy lo manejan, si tenés sistema actual..."></textarea>
+                        <label for="message" class="block text-sm font-semibold text-cream-strong mb-2">¿Qué querés resolver en la gestión de tu cartera? *</label>
+                        <textarea id="message" name="message" rows="5" required class="input-premium w-full px-4 py-3 rounded-lg" placeholder="Ej.: tener los expedientes al día, ordenar plazos y prevenir caducidades, cuántos abogados lo manejan hoy, si usás algún sistema... Por favor, no incluyas datos de causas concretas."></textarea>
                     </div>
 
                     <button type="submit" class="w-full btn-gold py-4 rounded-full text-lg font-bold">Solicitar demostración →</button>
