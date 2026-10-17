@@ -48,9 +48,15 @@
   </url>
   <url>
     <loc>https://animuslex.app/blog/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://animuslex.app/blog/tasas-judiciales-fiscalizacion-electronica-paraguay/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://animuslex.app/blog/escritos-electronicos-pdf-15-mb-anexos-paraguay/</loc>
