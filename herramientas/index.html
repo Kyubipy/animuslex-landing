@@ -22,6 +22,10 @@
     <meta property="og:image" content="https://animuslex.app/img-app/hero-escritos-electronicos-portal.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:video" content="https://animuslex.app/img-app/herramientas-pdf-promo.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="720">
+    <meta property="og:video:height" content="1280">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Herramientas PDF gratis para abogados — AnimusLex">
     <meta name="twitter:description" content="Achicá y dividí PDF para presentar escritos y anexos en el portal del Poder Judicial (hasta 15 MB por archivo). Gratis y sin subir tus archivos.">
@@ -51,6 +55,15 @@
           "item": "https://animuslex.app/herramientas/"
         }
       ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Achicá y dividí tus PDF: herramientas gratis para escritos judiciales",
+      "description": "En 30 segundos: achicar un PDF escaneado, dividirlo en partes de hasta 15 MB nombradas «Parte 1 de 4» y presentarlo en el portal del Poder Judicial, todo en el navegador y sin subir el archivo.",
+      "thumbnailUrl": "https://animuslex.app/img-app/herramientas-pdf-promo-poster.webp",
+      "uploadDate": "2026-10-20T12:00:00-03:00",
+      "duration": "PT30S",
+      "contentUrl": "https://animuslex.app/img-app/herramientas-pdf-promo.mp4"
     }
   ]
 }
@@ -105,6 +118,21 @@
         <div class="max-w-4xl mx-auto prose-custom mt-10">
             <p>Las dos funcionan <strong>dentro de tu navegador</strong>: tus archivos no se suben a ningún servidor. Las reglas completas del formulario están en la <a href="/blog/escritos-electronicos-pdf-15-mb-anexos-paraguay/" class="text-gold underline">guía de escritos electrónicos</a>.</p>
         </div>
+        <div class="max-w-4xl mx-auto mt-12 grid md:grid-cols-2 gap-10 items-center">
+            <div class="prose-custom order-2 md:order-1">
+                <h2 class="text-3xl serif font-bold gradient-text-gold mb-4">En 30 segundos</h2>
+                <p>Achicá un escaneo pesado, dividilo en partes de hasta 15 MB y presentalo sin trabarte con el portal. Todo en tu navegador, sin subir el archivo a ningún sitio.</p>
+                <p class="text-cream-muted text-sm">El video arranca sin sonido: tocá el parlante para escuchar la música.</p>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <video controls muted loop playsinline preload="none" data-autoplay-visible
+                       poster="/img-app/herramientas-pdf-promo-poster.webp" width="360" height="640"
+                       class="rounded-2xl w-full max-w-xs shadow-2xl" style="border: 1px solid rgba(212,175,55,0.35);"
+                       aria-label="Video de 30 segundos: herramientas gratis para achicar y dividir PDF">
+                    <source src="/img-app/herramientas-pdf-promo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </section>
 
     <section class="gradient-bg-dark py-16 px-6 border-y border-gold-subtle">
@@ -153,5 +181,19 @@
             </div>
         </div>
     </footer>
+    <script>
+    (function () {
+        var vids = document.querySelectorAll('video[data-autoplay-visible]');
+        if (!('IntersectionObserver' in window)) return;
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                var v = e.target;
+                if (e.isIntersecting) { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+                else { v.pause(); }
+            });
+        }, { threshold: 0.5 });
+        vids.forEach(function (v) { io.observe(v); });
+    })();
+    </script>
 </body>
 </html>
