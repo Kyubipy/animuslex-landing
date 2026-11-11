@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achicar PDF para escritos judiciales | AnimusLex</title>
-    <meta name="title" content="Achicar PDF para escritos judiciales | AnimusLex">
-    <meta name="description" content="Achicá un PDF para presentarlo en el portal del Poder Judicial (hasta 15 MB por archivo). Gratis y sin subir el archivo: se procesa en tu navegador.">
+    <title>Achicar PDF (comprimir) para el Poder Judicial | AnimusLex</title>
+    <meta name="title" content="Achicar PDF (comprimir) para el Poder Judicial | AnimusLex">
+    <meta name="description" content="Achicar o comprimir un PDF para el portal del Poder Judicial (hasta 15 MB por archivo). Gratis, en tu navegador y sin subir el archivo.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="geo.region" content="PY-ASU">
     <meta name="geo.placename" content="Asunción">
@@ -62,7 +62,7 @@
       "@type": "WebApplication",
       "name": "Achicar PDF para escritos judiciales",
       "url": "https://animuslex.app/herramientas/achicar-pdf/",
-      "description": "Achicá un PDF para presentarlo en el portal del Poder Judicial (hasta 15 MB por archivo). Gratis y sin subir el archivo: se procesa en tu navegador.",
+      "description": "Achicar o comprimir un PDF para el portal del Poder Judicial (hasta 15 MB por archivo). Gratis, en tu navegador y sin subir el archivo.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Cualquier navegador web",
       "inLanguage": "es-PY",
@@ -81,7 +81,7 @@
           "url": "https://animuslex.app/logo.png"
         }
       },
-      "dateModified": "2026-10-20"
+      "dateModified": "2026-11-10"
     },
     {
       "@type": "FAQPage",
@@ -124,6 +124,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sí, en el navegador del celular. Con archivos muy grandes puede tardar más que en una computadora, porque todo el trabajo lo hace tu propio dispositivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Achicar un PDF es lo mismo que comprimirlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. «Achicar», «comprimir» y «reducir el tamaño» de un PDF son lo mismo: lograr que el archivo pese menos megas sin cambiar la cantidad de páginas. Lo que cambia según el modo que elijas es cuánto baja el peso y cuánta nitidez conserva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto se puede achicar un PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del documento. En una prueba nuestra, un PDF de 73,2 MB quedó en 9,7 MB. Los documentos escaneados o con fotos son los que más bajan; un PDF con texto digital, que ya es liviano, baja poco. Al terminar, la herramienta muestra el peso de antes y el de después."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hago si el portal dice «Archivo demasiado grande»?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ese aviso aparece cuando un archivo supera los 15 MB que acepta el formulario «Presentar escrito». Fijate cuál es el archivo que se pasa, achicalo acá y volvé a cargarlo. Si achicado sigue pasando el límite, dividilo en partes y subí cada una como un anexo."
           }
         }
       ]
@@ -221,6 +245,19 @@
             <div class="flex gap-4"><div class="paso-num">2</div><p class="!mb-0">Elegí el modo: <strong>«Escaneado»</strong> para documentos escaneados o con fotos, <strong>«Mantener el texto»</strong> para un escrito hecho en Word.</p></div>
             <div class="flex gap-4"><div class="paso-num">3</div><p class="!mb-0">Descargá el PDF achicado y revisalo antes de presentarlo. Si todavía pasa el límite, la misma herramienta te ofrece <a href="/herramientas/dividir-pdf/" class="text-gold underline">dividirlo en partes</a>.</p></div>
         </div>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Cuándo conviene achicar un PDF (y cuándo no)</h2>
+        <p>Achicar un PDF —o comprimirlo, que es lo mismo— sirve cuando <strong>un solo archivo</strong> pasa los 15 MB que el formulario del portal del Poder Judicial acepta por archivo. El caso típico es el anexo escaneado a color o armado con fotos del celular: pocas páginas y muchos megas. Un escrito redactado en la computadora y guardado como PDF suele ser liviano y rara vez lo necesita.</p>
+        <p>Si el documento es largo y preferís conservar la nitidez original, la otra salida es <a href="/herramientas/dividir-pdf/" class="text-gold underline">dividir el PDF en partes</a> y subir cada una como un anexo. Las dos se combinan: primero achicás y, si no alcanza, dividís el resultado.</p>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Qué esperar del resultado</h2>
+        <ul>
+            <li>Al terminar ves el <strong>peso de antes y el de después</strong>, con el porcentaje de reducción. En una prueba nuestra, un PDF de <strong>73,2 MB quedó en 9,7 MB</strong>. No todos bajan tanto: depende de cuánto del peso sean imágenes.</li>
+            <li>En el modo «Escaneado» <strong>la nitidez baja</strong>, porque cada página pasa a una imagen más liviana. Con la calidad «Automática», la herramienta elige sola la calidad para que el archivo entre en el límite que elegiste y, si hace falta, lo pasa a escala de grises; al terminar te dice cuál usó. También podés fijarla vos: «Alta (200 ppp)», «Buena (150 ppp)» o «Máxima reducción (110 ppp)». Pasar a escala de grises aliviana todavía más.</li>
+            <li>Antes de presentar, abrí el resultado y mirá lo más chico: la letra de los sellos, las firmas manuscritas, los números de cédula, los montos. Si algo no se lee, repetí con «Alta (200 ppp)»; y si así no entra en el límite, dividí en vez de achicar.</li>
+            <li>En el modo «Mantener el texto», el texto sigue siendo texto (se puede seleccionar y buscar), pero la reducción es chica. Si casi no baja, la herramienta te ofrece probar con el otro modo.</li>
+            <li>Si el PDF pide una contraseña para abrirse, la herramienta no puede leerlo: guardalo sin protección y probá de nuevo.</li>
+        </ul>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Si igual no entra en los 15 MB</h2>
+        <p>Cuando la versión achicada todavía pasa el límite, la herramienta te ofrece ahí mismo dividirla en partes que entren en el límite que elegiste, cada una para subir como un anexo. Si preferís no perder nitidez, hacé el camino inverso: dividí el original sin achicarlo. Las dos opciones están juntas en la página de <a href="/herramientas/" class="text-gold underline">herramientas PDF</a>.</p>
         <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Antes de presentar</h2>
         <ul>
             <li>El límite del portal es de <strong>15 MB por archivo</strong>: el escrito y cada anexo se cuentan por separado. La herramienta deja siempre un pequeño margen para que el portal no lo rechace.</li>
@@ -254,6 +291,18 @@
             <details class="card-premium rounded-xl overflow-hidden">
                 <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Funciona en el celular?</span></summary>
                 <div class="px-5 pb-5 text-cream-muted leading-relaxed">Sí, en el navegador del celular. Con archivos muy grandes puede tardar más que en una computadora, porque todo el trabajo lo hace tu propio dispositivo.</div>
+            </details>
+            <details class="card-premium rounded-xl overflow-hidden">
+                <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Achicar un PDF es lo mismo que comprimirlo?</span></summary>
+                <div class="px-5 pb-5 text-cream-muted leading-relaxed">Sí. «Achicar», «comprimir» y «reducir el tamaño» de un PDF son lo mismo: lograr que el archivo pese menos megas sin cambiar la cantidad de páginas. Lo que cambia según el modo que elijas es cuánto baja el peso y cuánta nitidez conserva.</div>
+            </details>
+            <details class="card-premium rounded-xl overflow-hidden">
+                <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Cuánto se puede achicar un PDF?</span></summary>
+                <div class="px-5 pb-5 text-cream-muted leading-relaxed">Depende del documento. En una prueba nuestra, un PDF de 73,2 MB quedó en 9,7 MB. Los documentos escaneados o con fotos son los que más bajan; un PDF con texto digital, que ya es liviano, baja poco. Al terminar, la herramienta muestra el peso de antes y el de después.</div>
+            </details>
+            <details class="card-premium rounded-xl overflow-hidden">
+                <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Qué hago si el portal dice «Archivo demasiado grande»?</span></summary>
+                <div class="px-5 pb-5 text-cream-muted leading-relaxed">Ese aviso aparece cuando un archivo supera los 15 MB que acepta el formulario «Presentar escrito». Fijate cuál es el archivo que se pasa, achicalo acá y volvé a cargarlo. Si achicado sigue pasando el límite, dividilo en partes y subí cada una como un anexo.</div>
             </details>
         </div>
     </section>

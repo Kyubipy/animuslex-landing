@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dividir PDF en partes de menos de 15 MB | AnimusLex</title>
     <meta name="title" content="Dividir PDF en partes de menos de 15 MB | AnimusLex">
-    <meta name="description" content="Dividí un PDF pesado en partes de menos de 15 MB, nombradas «Parte 1 de 3», para subirlas como anexos al Poder Judicial. Gratis y sin subir el archivo.">
+    <meta name="description" content="Dividir un PDF en partes de menos de 15 MB para subirlas como anexos al portal del Poder Judicial. Gratis, en tu navegador y sin subir el archivo.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="geo.region" content="PY-ASU">
     <meta name="geo.placename" content="Asunción">
@@ -62,7 +62,7 @@
       "@type": "WebApplication",
       "name": "Dividir PDF en partes de menos de 15 MB",
       "url": "https://animuslex.app/herramientas/dividir-pdf/",
-      "description": "Dividí un PDF pesado en partes de menos de 15 MB, nombradas «Parte 1 de 3», para subirlas como anexos al Poder Judicial. Gratis y sin subir el archivo.",
+      "description": "Dividir un PDF en partes de menos de 15 MB para subirlas como anexos al portal del Poder Judicial. Gratis, en tu navegador y sin subir el archivo.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Cualquier navegador web",
       "inLanguage": "es-PY",
@@ -81,7 +81,7 @@
           "url": "https://animuslex.app/logo.png"
         }
       },
-      "dateModified": "2026-10-20"
+      "dateModified": "2026-11-10"
     },
     {
       "@type": "FAQPage",
@@ -124,6 +124,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No conviene: las partes de un PDF firmado digitalmente pierden la validez de la firma. Dividí el documento antes de firmarlo y firmá cada parte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dividir un PDF le baja la calidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Al dividir, cada parte lleva las mismas páginas del original, con la misma nitidez: solo se reparten en varios archivos (los marcadores del índice no se conservan). Si además necesitás que pese menos, eso se hace con la herramienta «Achicar PDF»."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo separar los anexos de un PDF que los trae todos juntos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Elegí el modo «Por rangos de páginas» y escribí dónde empieza y termina cada documento, por ejemplo: 1-12, 13-40, 41-58. Cada rango sale como un archivo aparte, listo para subir como un anexo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En cuántas partes queda un PDF muy pesado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de cuánto pese cada página. En el modo automático, la herramienta arma la menor cantidad de partes posible, cada una por debajo del límite que elijas, salvo que una página sola lo supere. En una prueba nuestra, un PDF de 49,3 MB se dividió en 4 partes."
           }
         }
       ]
@@ -212,6 +236,25 @@
             <div class="flex gap-4"><div class="paso-num">2</div><p class="!mb-0">Dejá el modo <strong>automático</strong> (o elegí cortar cada tantas páginas o por rangos) y escribí el nombre de las partes.</p></div>
             <div class="flex gap-4"><div class="paso-num">3</div><p class="!mb-0">Descargá las partes, una por una o todas juntas en un ZIP, y subí cada una como un anexo.</p></div>
         </div>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Cuándo conviene dividir un PDF (y cuándo achicarlo)</h2>
+        <p>Dividir sirve cuando el documento es <strong>largo</strong> y no querés perder nitidez: las páginas de cada parte conservan la nitidez del original; solo se reparten en varios archivos. Es lo que conviene, por ejemplo, con un legajo de pruebas escaneado, un contrato con muchos anexos o un expediente administrativo completo.</p>
+        <p>Si en cambio son pocas páginas muy pesadas —fotos o escaneos a color—, lo primero es <a href="/herramientas/achicar-pdf/" class="text-gold underline">achicar el PDF</a>: puede que ya entre en un solo archivo y, si no, quedan menos partes para subir.</p>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Por dónde cortar: anexos y cortes lógicos</h2>
+        <p>El modo automático arma la menor cantidad de partes posible, pero corta donde se llena el tamaño, no donde termina un documento. Si tu PDF trae varios documentos seguidos, conviene el modo <strong>«Por rangos de páginas»</strong>, para que cada parte empiece y termine en un documento completo: por ejemplo, el contrato en las páginas 1-12, las facturas en 13-40 y las notas en 41-58. Así, quien lee el expediente encuentra cada anexo entero, sin buscar la otra mitad en el archivo siguiente.</p>
+        <ul>
+            <li>Antes de cortar, anotá en qué página empieza cada documento: esos números son los rangos.</li>
+            <li>Poné un nombre que diga qué es («Pruebas documentales», «Contrato y adendas»): cada archivo lo lleva, seguido de «Parte 1 de 3», «Parte 2 de 3»…</li>
+            <li>«Cada cierta cantidad de páginas» sirve cuando el documento es parejo y solo querés tandas iguales.</li>
+            <li>Si cortás por rangos o por cantidad de páginas y alguna parte pasa el límite, la herramienta la marca: elegí menos páginas para esa parte.</li>
+        </ul>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Qué esperar del resultado</h2>
+        <ul>
+            <li>Una lista con cada parte, las páginas que abarca y su peso, para descargarlas una por una o todas juntas en un ZIP.</li>
+            <li>En una prueba nuestra, un PDF de <strong>49,3 MB se dividió en 4 partes</strong>. La cantidad depende de cuánto pese cada página.</li>
+            <li>En el modo automático, si tu PDF ya entra en el límite, la herramienta te avisa que no hace falta dividirlo.</li>
+        </ul>
+        <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Si igual no alcanza</h2>
+        <p>El caso que dividir no resuelve es el de una página que, sola, pesa más que el límite: queda sola en su parte y la herramienta te avisa. Ahí hay que achicar primero y dividir después; las dos opciones están en la página de <a href="/herramientas/" class="text-gold underline">herramientas PDF</a>.</p>
         <h2 class="text-3xl serif font-bold gradient-text-gold mb-6">Cómo se suben las partes al portal</h2>
         <ul>
             <li>En el formulario «Presentar escrito», cada parte va con el botón <strong>«Agregar anexo»</strong>, en orden: Parte 1, Parte 2…</li>
@@ -244,6 +287,18 @@
             <details class="card-premium rounded-xl overflow-hidden">
                 <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Puedo dividir un PDF que ya firmé digitalmente?</span></summary>
                 <div class="px-5 pb-5 text-cream-muted leading-relaxed">No conviene: las partes de un PDF firmado digitalmente pierden la validez de la firma. Dividí el documento antes de firmarlo y firmá cada parte.</div>
+            </details>
+            <details class="card-premium rounded-xl overflow-hidden">
+                <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Dividir un PDF le baja la calidad?</span></summary>
+                <div class="px-5 pb-5 text-cream-muted leading-relaxed">No. Al dividir, cada parte lleva las mismas páginas del original, con la misma nitidez: solo se reparten en varios archivos (los marcadores del índice no se conservan). Si además necesitás que pese menos, eso se hace con la herramienta «Achicar PDF».</div>
+            </details>
+            <details class="card-premium rounded-xl overflow-hidden">
+                <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿Puedo separar los anexos de un PDF que los trae todos juntos?</span></summary>
+                <div class="px-5 pb-5 text-cream-muted leading-relaxed">Sí. Elegí el modo «Por rangos de páginas» y escribí dónde empieza y termina cada documento, por ejemplo: 1-12, 13-40, 41-58. Cada rango sale como un archivo aparte, listo para subir como un anexo.</div>
+            </details>
+            <details class="card-premium rounded-xl overflow-hidden">
+                <summary class="px-5 py-4 font-semibold text-cream-soft hover:text-gold flex items-start gap-3"><span class="text-gold arrow">▼</span><span>¿En cuántas partes queda un PDF muy pesado?</span></summary>
+                <div class="px-5 pb-5 text-cream-muted leading-relaxed">Depende de cuánto pese cada página. En el modo automático, la herramienta arma la menor cantidad de partes posible, cada una por debajo del límite que elijas, salvo que una página sola lo supere. En una prueba nuestra, un PDF de 49,3 MB se dividió en 4 partes.</div>
             </details>
         </div>
     </section>
