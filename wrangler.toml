@@ -1,0 +1,15 @@
+# animuslex.app en Cloudflare Workers (mudanza desde Render, 10-nov-2026).
+# Los archivos estáticos se sirven tal cual (html_handling = "none") para que las URL
+# con .html sigan respondiendo 200 sin redirecciones, como en Render.
+# worker.js solo atiende lo que no coincide exacto: carpetas (index.html) y URL sin extensión.
+name = "animuslex"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+html_handling = "none"
+
+[observability]
+enabled = true
