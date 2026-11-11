@@ -2,7 +2,7 @@ name: IndexNow (aviso a buscadores tras cada publicación)
 
 # El vigilante cloud no puede llamar a api.indexnow.org (egress bloqueado).
 # GitHub Actions sí: en cada push a main mapea los archivos cambiados a URLs
-# públicas, espera al auto-deploy de Render y avisa a los buscadores.
+# públicas, espera al auto-deploy de Cloudflare (Workers Builds) y avisa a los buscadores.
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
           print("URLs a avisar:", *sorted(urls), sep="\n  ")
           PY
 
-      - name: Esperar al auto-deploy de Render
+      - name: Esperar al auto-deploy de Cloudflare
         run: sleep 150
 
       - name: Ping IndexNow
