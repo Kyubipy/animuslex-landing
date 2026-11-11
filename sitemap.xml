@@ -41,12 +41,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://animuslex.app/contacto.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://animuslex.app/blog/</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -138,7 +132,7 @@
   </url>
   <url>
     <loc>https://animuslex.app/blog/resolucion-12677-csj-ia-poder-judicial-paraguay/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
